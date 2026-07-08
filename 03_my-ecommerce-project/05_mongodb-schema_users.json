@@ -1,0 +1,80 @@
+{
+  "collection": "users",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "User Object Validation",
+      "required": ["username", "passwordHash", "role", "fullName", "isActive", "createdAt"],
+      "properties": {
+        "_id": {
+          "bsonType": "objectId"
+        },
+        "username": {
+          "bsonType": "string",
+          "description": "ชื่อผู้ใช้สำหรับล็อกอิน ต้องไม่ซ้ำ",
+          "minLength": 3,
+          "maxLength": 30
+        },
+        "passwordHash": {
+          "bsonType": "string",
+          "description": "รหัสผ่านที่ถูกเข้ารหัสแล้ว (bcrypt hash) ห้ามเก็บ plain text"
+        },
+        "role": {
+          "bsonType": "string",
+          "enum": ["admin", "staff", "customer"],
+          "description": "บทบาทผู้ใช้: admin จัดการระบบทั้งหมด, staff ใช้หน้า POS, customer ลูกค้าทั่วไป"
+        },
+        "fullName": {
+          "bsonType": "string",
+          "description": "ชื่อ-นามสกุลจริง"
+        },
+        "email": {
+          "bsonType": ["string", "null"],
+          "pattern": "^.+@.+\\..+$",
+          "description": "อีเมล (ไม่บังคับสำหรับลูกค้า walk-in)"
+        },
+        "phone": {
+          "bsonType": ["string", "null"],
+          "description": "เบอร์โทรศัพท์"
+        },
+        "memberPoint": {
+          "bsonType": ["int", "null"],
+          "minimum": 0,
+          "description": "แต้มสะสมสมาชิก (ใช้เฉพาะ role: customer ที่สมัครสมาชิก)"
+        },
+        "avatarUrl": {
+          "bsonType": ["string", "null"]
+        },
+        "isActive": {
+          "bsonType": "bool",
+          "description": "true = ใช้งานได้, false = ถูกลบ/ระงับ (soft delete แทนการลบจริง)"
+        },
+        "createdAt": {
+          "bsonType": "date"
+        },
+        "updatedAt": {
+          "bsonType": ["date", "null"]
+        }
+      }
+    }
+  },
+  "indexes": [
+    { "key": { "username": 1 }, "unique": true },
+    { "key": { "role": 1 } },
+    { "key": { "email": 1 }, "unique": false, "sparse": true }
+  ],
+  "sampleDocument": {
+    "_id": { "$oid": "665f1a2b3c4d5e6f7a8b9c01" },
+    "username": "admin01",
+    "passwordHash": "$2b$10$examplehashvalue........",
+    "role": "admin",
+    "fullName": "สมชาย ผู้ดูแลระบบ",
+    "email": "admin@salmondong.shop",
+    "phone": "0891234567",
+    "memberPoint": null,
+    "avatarUrl": null,
+    "isActive": true,
+    "createdAt": { "$date": "2026-01-05T08:00:00Z" },
+    "updatedAt": null
+  }
+}

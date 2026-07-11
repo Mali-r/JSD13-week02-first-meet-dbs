@@ -1,0 +1,19 @@
+
+// {
+//     "_id": "ObjectId",
+//     "User_Name": "String",
+//     "Password": "String",
+//     "Full_Name": "String",
+//     "Role": "String",
+//     "isActive": Boolean
+// }
+
+
+{
+    "_id": "64b1f1a2c3d4e5f6a7b8c002",
+    "User_Name": "owner_admin",
+    "Password": "$2b$10$hashedpassword456",
+    "Full_Name": "เจ้าของร้าน (Owner)",
+    "Role": "admin",
+    "isActive": true
+}

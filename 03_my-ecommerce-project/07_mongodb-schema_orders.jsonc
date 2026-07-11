@@ -1,0 +1,62 @@
+// {
+//     "_id": "objectId",
+//     "Customer_ID": "objectId",
+//     "Order_Date": "date",
+//     "Total_Amount": decimal,
+//     "Payment_Method": "string",
+//     "User_ID": "objectId",
+//     "Total_Cost": decimal,
+//     "Gross_Profit": decimal,
+//     "Items": [
+//       {
+//         "Product_ID": "objectId",
+//         "Product_Name": "string",
+//         "Quantity": int,
+//         "Price_Per_Unit": decimal,
+//         "Subtotal": decimal,
+//         "Cost_Per_Unit": decimal,
+//         "Cost_Subtotal": decimal
+//       }
+// }
+
+[
+  {
+    "_id": "64b1f1a2c3d4e5f6a7b8c301",
+    "Customer_ID": "64b1f1a2c3d4e5f6a7b8c101",
+    "Order_Date": "2026-07-01T11:20:00Z",
+    "Total_Amount": 1100.00,
+    "Payment_Method": "cash",
+    "User_ID": "64b1f1a2c3d4e5f6a7b8c001",
+    "Total_Cost": 514.00,
+    "Gross_Profit": 586.00,
+    "Items": [
+      {
+        "Product_ID": "64b1f1a2c3d4e5f6a7b8c204",
+        "Product_Name": "ม่อน+กุ้ง",
+        "Quantity": 6,
+        "Price_Per_Unit": 100.00,
+        "Subtotal": 600.00,
+        "Cost_Per_Unit": 47.00,
+        "Cost_Subtotal": 282.00
+      },
+      {
+        "Product_ID": "64b1f1a2c3d4e5f6a7b8c202",
+        "Product_Name": "กุ้งดอง",
+        "Quantity": 4,
+        "Price_Per_Unit": 100.00,
+        "Subtotal": 400.00,
+        "Cost_Per_Unit": 51.00,
+        "Cost_Subtotal": 204.00
+      },
+      {
+        "Product_ID": "64b1f1a2c3d4e5f6a7b8c201",
+        "Product_Name": "แซลมอนดอง",
+        "Quantity": 1,
+        "Price_Per_Unit": 100.00,
+        "Subtotal": 100.00,
+        "Cost_Per_Unit": 28.00,
+        "Cost_Subtotal": 28.00
+      }
+    ]
+  }
+]

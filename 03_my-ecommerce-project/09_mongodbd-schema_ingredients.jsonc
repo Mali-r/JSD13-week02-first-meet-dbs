@@ -1,3 +1,11 @@
+// {
+//   "_id": "objectId",
+//   "Ingredient_Name": "string",
+//   "Stock_Qty": double,
+//   "Unit": "string",
+//   "Avg_Cost_Per_Unit": decimal
+// }
+
 [
   {
     "_id": "64b1f1a2c3d4e5f6a7b8c401",

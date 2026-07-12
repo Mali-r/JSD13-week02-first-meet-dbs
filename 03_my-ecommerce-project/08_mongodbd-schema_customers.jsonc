@@ -1,3 +1,18 @@
+// {
+//     "_id": "objectId",
+//     "Customer_Name": "String",
+//     "Phone_Number": "String",
+//     "Location": "String",
+//     "Points": "int",
+//     "Register_Date": "Date",
+//     "Favorite_Product": [
+//       {
+//         "Product_ID": "objectId",
+//         "Added_Date": "date"
+//       }
+//     ]
+//   }
+
 [
   {
     "_id": "64b1f1a2c3d4e5f6a7b8c101",

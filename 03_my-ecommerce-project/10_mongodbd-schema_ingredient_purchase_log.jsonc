@@ -1,3 +1,13 @@
+// {
+//   "_id": "objectId",
+//   "Ingredient_ID": "objectId",
+//   "Purchase_Date": "date",
+//   "Qty_Bought": decimal,
+//   "Cost_Per_Unit": decimal,
+//   "Total_Cost": decimal,
+//   "User_ID": "objectId"
+// }
+
 [
   {
     "_id": "64b1f1a2c3d4e5f6a7b8c501",
